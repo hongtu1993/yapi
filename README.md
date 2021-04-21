@@ -18,7 +18,7 @@
 ## 可修改变量
 | 环境变量       | 默认值         | 建议         |
 | ------------- |:-------------:|:-----------:|
-| VERSION | 1.5.6  | 可以修改成yapi已发布的版本   |
+| VERSION | 1.9.2  | 可以修改成yapi已发布的版本   |
 | HOME | /home | 可修改 |  
 | PORT | 3000  | 可修改 | 
 | ADMIN_EMAIL | me@jinfeijie.cn  | 建议修改 | 
@@ -40,19 +40,19 @@ services:
     # build: ./
     container_name: yapi
     environment:
-      - VERSION=1.5.6
+      - VERSION=1.9.2
       - LOG_PATH=/tmp/yapi.log
       - HOME=/home
       - PORT=3000
-      - ADMIN_EMAIL=me@jinfeijie.cn
+      - ADMIN_EMAIL=hongtu1993@sina.cn
       - DB_SERVER=mongo
       - DB_NAME=yapi
       - DB_PORT=27017
     # restart: always
     ports:
       - 127.0.0.1:3000:3000
-    volumes:
-      - ~/data/yapi/log/yapi.log:/home/vendors/log # log dir
+    # volumes:
+      # - ~/data/yapi/log/yapi.log:/home/vendors/log # log dir
     depends_on:
       - mongo
     entrypoint: "bash /wait-for-it.sh mongo:27017 -- entrypoint.sh"
@@ -65,7 +65,7 @@ services:
     ports:
       - 127.0.0.1:27017:27017
     volumes:
-      - ~/data/yapi/mongodb:/data/db #db dir
+      - ./mongodb:/data/db #db dir
     networks:
       - back-net
 networks:
@@ -96,9 +96,3 @@ server {
 2. 创建network：`docker network create back-net`
 
 3. 启动服务：`docker-compose up -d`
-
-
-## 其他
-📧联系[@jinfeijie](mailto:me@jinfeijie.cn)
-
-✨欢迎 Star && Fork
