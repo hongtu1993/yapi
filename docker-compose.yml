@@ -16,8 +16,8 @@ services:
     # restart: always
     ports:
       - 127.0.0.1:3000:3000
-    volumes:
-      - ~/data/yapi/log/yapi.log:/home/vendors/log # log dir
+    # volumes:
+      # - ~/data/yapi/log/yapi.log:/home/vendors/log # log dir
     depends_on:
       - mongo
     entrypoint: "bash /wait-for-it.sh mongo:27017 -- entrypoint.sh"
@@ -30,7 +30,7 @@ services:
     ports:
       - 127.0.0.1:27017:27017
     volumes:
-      - ~/data/yapi/mongodb:/data/db #db dir
+      - ./mongodb:/data/db #db dir
     networks:
       - back-net
 networks:
