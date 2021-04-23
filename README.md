@@ -44,7 +44,7 @@ services:
       - LOG_PATH=/tmp/yapi.log
       - HOME=/home
       - PORT=3000
-      - ADMIN_EMAIL=me@jinfeijie.cn
+      - ADMIN_EMAIL=hongtu1993@sina.cn
       - DB_SERVER=mongo
       - DB_NAME=yapi
       - DB_PORT=27017
@@ -71,6 +71,7 @@ services:
 networks:
   back-net:
     external: true
+
 ```
 
 ## Nginx 配置
