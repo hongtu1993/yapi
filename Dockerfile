@@ -1,12 +1,13 @@
 FROM node:10.22.0-jessie
-MAINTAINER mrjin<me@jinfeijie.cn>
+MAINTAINER mao<hongtu1993@sina.cn>
 ENV VERSION 	1.9.2
 ENV HOME        "/home"
 ENV PORT        3000
-ENV ADMIN_EMAIL "me@jinfeijie.cn"
+ENV ADMIN_EMAIL "hongtu1993@sina.cn"
 ENV DB_SERVER 	"mongo"
 ENV DB_NAME 	"yapi"
 ENV DB_PORT 	27017
+ENV CLOSE-REG 	true
 ENV VENDORS 	${HOME}/vendors
 ENV GIT_URL     https://github.com/YMFE/yapi.git
 ENV GIT_MIRROR_URL     https://gitee.com/mirrors/YApi.git

@@ -7,6 +7,7 @@ then
 	sed -i "s/DIY-DB-SERVER/"${DB_SERVER}"/g" ${HOME}/config.json
 	sed -i "s/DIY-DB-NAME/"${DB_NAME}"/g" ${HOME}/config.json
 	sed -i "s/DIY-DB-PORT/"${DB_PORT}"/g" ${HOME}/config.json
+	sed -i "s/DIY-CLOSE-REG/"${CLOSE-REG}"/g" ${HOME}/config.json
 	mv ${HOME}/config.json ${VENDORS}
 	cp ${VENDORS}/config.json ${HOME}
 	cp ${VENDORS}/config.json ${HOME}/../
