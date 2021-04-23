@@ -37,14 +37,14 @@ version: '2.1'
 services:
   yapi:
     image: mrjin/yapi:latest
-    # build: ./
+#    build: ./
     container_name: yapi
     environment:
       - VERSION=1.9.2
       - LOG_PATH=/tmp/yapi.log
       - HOME=/home
       - PORT=3000
-      - ADMIN_EMAIL=hongtu1993@sina.cn
+      - ADMIN_EMAIL=me@jinfeijie.cn
       - DB_SERVER=mongo
       - DB_NAME=yapi
       - DB_PORT=27017
